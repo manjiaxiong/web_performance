@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/manjiaxiong/web_performance/issues"
   },
-  "homepage": "https://github.com/manjiaxiong/web_performance#readme"
+  "homepage": "https://github.com/manjiaxiong/web_performance#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "html-minify": "^0.3.2",
+    "minifier": "^0.8.1"
+  }
 }
