@@ -27,6 +27,30 @@
             尽量避免@import写法 
             因为@import是最后加载完页面才加载会导致空白页面 
             还有一点是因为@import是串行请求 会阻碍加载影响性能
+            尽量用link link是并行加载
+            CSS： css中的@import是为了开发者能将css分解成更小的部分，它的引入会直接发起一个HTTP的请求。
+            SCSS预编译： scss的@import则更加像我们使用的import等模块化的东西，它是直接将代码包含进目标SCSS文件，而不会产生额外的http请求。
+        </li>
+        <li>
+            尽量将link放在head标签里面
+        </li>
+        <li>
+            能用过度就用过度
+                支持广泛
+                回流复杂dom时cpu的使用效率更高
+                无额外开销 不像js那样引用库
+        </li>
+    </ul>
+    <ul>
+        <li>理解什么是关键css</li>
+        <li>
+            折叠？
+                折叠就是页面上的内容
+                所以关键css就是折叠之上的内容
+                非关键css就是折叠下的内容
+        </li>
+        <li>
+            加载首屏以外的css可以利用link的rel=preload 加了这个属性的link不会立即加载 他会在页面onload时修改(preload->stylesheet)el使样式渲染
         </li>
     </ul>
 </body>
